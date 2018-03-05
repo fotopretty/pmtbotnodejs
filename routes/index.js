@@ -1,14 +1,14 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var router = express.Router();
+var app= express.Router();
 
-router.use(bodyParser.json())
-router.use(bodyParser.urlencoded({extended: false}))
-router.use(bodyParser.json())
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+app.get('/', function(req, res, next) {
   res.sendStatus(200)
 });
 
-module.exports = router;
+module.exports = app;
