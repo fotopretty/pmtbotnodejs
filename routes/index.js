@@ -18,7 +18,7 @@ app.post('/webhook', function(req, res, next) {
   }
   res.sendStatus(200);
 });
-*/
+
 function sendText (sender, text) {
   let data = {
     to: sender,
@@ -44,7 +44,7 @@ function sendText (sender, text) {
     if (body) console.log(body)
   });
 }
-
+*/
 /* GET home page. */
 app.get('/', function (req, res, next) {
   res.send('Hello LINE BOT');
