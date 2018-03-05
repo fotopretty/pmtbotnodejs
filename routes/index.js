@@ -8,7 +8,7 @@ router.use(bodyParser.json())
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send('Hello');
+  res.sendStatus(200)
 });
 
 module.exports = router;
