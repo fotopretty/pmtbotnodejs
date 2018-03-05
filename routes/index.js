@@ -7,7 +7,7 @@ var app = express.Router()
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
-app.post('/webhook', (req, res, next) {
+app.post('/webhook', function(req, res, next) {
   var text = req.body.events[0].message.text
   var sender = req.body.events[0].source.userId
   var replyToken = req.body.events[0].replyToken
@@ -17,8 +17,8 @@ app.post('/webhook', (req, res, next) {
   if (text === 'สวัสดี' || text === 'Hello' || text === 'hello') {
     sendText(sender, text)
   }
-  res.sendStatus(200)
-})
+  res.sendStatus(200);
+});
 
 function sendText (sender, text) {
   let data = {
@@ -26,7 +26,7 @@ function sendText (sender, text) {
     messages: [
       {
         type: 'text',
-        text: 'สวัสดีค่ะ เราเป็นผู้ช่วยปรึกษาด้านความรัก สำหรับหมามิ้น 💞'
+        text: 'สวัสดีค่ะ เราเป็นผู้ช่วยปรึกษาด้านความรัก สำหรับหมามิ้น'
       }
     ]
   }
@@ -43,7 +43,7 @@ function sendText (sender, text) {
     if (err) console.log('error')
     if (res) console.log('success')
     if (body) console.log(body)
-  })
+  });
 }
 
 /* GET home page. */
