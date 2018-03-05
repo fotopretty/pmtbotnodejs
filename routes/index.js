@@ -47,7 +47,7 @@ function sendText (sender, text) {
 
 /* GET home page. */
 app.get('/', function (req, res, next) {
-  res.send('Hello LINE BOT')
+  res.send('Hello LINE BOT');
 });
 
 module.exports = app;
