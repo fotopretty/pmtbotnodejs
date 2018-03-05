@@ -5,7 +5,7 @@ var app = express.Router();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
+/*
 app.post('/webhook', function(req, res, next) {
   var text = req.body.events[0].message.text
   var sender = req.body.events[0].source.userId
@@ -18,7 +18,7 @@ app.post('/webhook', function(req, res, next) {
   }
   res.sendStatus(200);
 });
-
+*/
 function sendText (sender, text) {
   let data = {
     to: sender,
