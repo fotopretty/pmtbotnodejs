@@ -17,6 +17,8 @@ app.post('/webhook', function(req, res, next) {
   sendText(sender,msgans)
   if (text === 'สวัสดี' || text === 'Hello' || text === 'hello') {
     sendText(sender, text)
+  } else {
+    sendText(sender,msgans)
   }
   res.sendStatus(200);
 });
