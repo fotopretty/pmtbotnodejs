@@ -30,7 +30,7 @@ function sendText (sender, text) {
       {
         type: 'text',
 //        text: 'สวัสดีค่ะ เราเป็นผู้ช่วยปรึกษาด้านความรัก สำหรับหมามิ้น'
-          text: msgans
+          text: text
       }
     ]
   }
