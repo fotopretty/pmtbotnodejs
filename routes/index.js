@@ -5,7 +5,7 @@ var app = express.Router();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-/*
+
 app.post('/webhook', function(req, res, next) {
   var text = req.body.events[0].message.text
   var sender = req.body.events[0].source.userId
@@ -44,7 +44,7 @@ function sendText (sender, text) {
     if (body) console.log(body)
   });
 }
-*/
+
 /* GET home page. */
 app.get('/', function (req, res, next) {
   res.send('Hello LINE BOT');
