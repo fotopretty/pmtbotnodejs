@@ -14,7 +14,7 @@ app.post('/webhook', function(req, res, next) {
   console.log(typeof sender, typeof text)
   // console.log(req.body.events[0])
   var msgans = 'ลองพิมพ์ สวัสดี Hello hello คำใดคำนึงดูนะ'
-  sendText(sender,msgans)
+  //sendText(sender,msgans)
   if (text === 'สวัสดี' || text === 'Hello' || text === 'hello') {
     sendText(sender, text)
   } else {
