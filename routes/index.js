@@ -13,13 +13,11 @@ app.post('/webhook', function(req, res, next) {
   console.log(text, sender, replyToken)
   console.log(typeof sender, typeof text)
   // console.log(req.body.events[0])
-  var msgans = 'ลองพิมพ์ สวัสดี Hello hello คำใดคำนึงดูนะ'
+  var msgans = 'ออเจ้า สวัสดีเจ้าค่ะ สนใจงานพริ้ตต้ เอ็มซี สอบถามได้นะค่ะ หรือจะโพสงาน โพสได้เจ้้าค่ะแม่หญิง...'
   //sendText(sender,msgans)
   if (text === 'สวัสดี' || text === 'Hello' || text === 'hello') {
-    sendText(sender, text)
-  } else {
-    sendText(sender,msgans)
-  }
+    sendText(sender, msgans)
+  } 
   res.sendStatus(200);
 });
 
@@ -29,7 +27,6 @@ function sendText (sender, text) {
     messages: [
       {
         type: 'text',
-//        text: 'สวัสดีค่ะ เราเป็นผู้ช่วยปรึกษาด้านความรัก สำหรับหมามิ้น'
           text: text
       }
     ]
